@@ -64,18 +64,18 @@ Removes all entries from the map.
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
-console.log(cache.size) // 2
-cache.clear()
-console.log(cache.size) // 0
+console.log(cache.size); // 2
+cache.clear();
+console.log(cache.size); // 0
 ```
 
 ### constructor
@@ -91,19 +91,19 @@ Creates a new WeakValueMap instance, optionally initialized with entries.
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
 // Create an empty map
-const cache = new WeakValueMap<string, User>()
+const cache = new WeakValueMap<string, User>();
 
 // Create a map with initial entries
 const cache2 = new WeakValueMap<string, User>([
     ["user-1", user1],
     ["user-2", user2],
-])
+]);
 ```
 
 ### delete
@@ -117,16 +117,16 @@ Removes the entry with the specified key from the map. Returns `true` if an entr
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
+const user1: User = { id: "user-1", name: "Alice" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
 
-console.log(cache.delete("user-1")) // true
-console.log(cache.delete("user-1")) // false (already deleted)
-console.log(cache.has("user-1")) // false
+console.log(cache.delete("user-1")); // true
+console.log(cache.delete("user-1")); // false (already deleted)
+console.log(cache.has("user-1")); // false
 ```
 
 ### entries
@@ -140,17 +140,17 @@ Returns an iterator of `[key, value]` pairs for each entry in the map. Only incl
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
 for (const [key, value] of cache.entries()) {
-    console.log(key, value)
+    console.log(key, value);
 }
 // "user-1" { id: "user-1", name: "Alice" }
 // "user-2" { id: "user-2", name: "Bob" }
@@ -170,18 +170,18 @@ Executes a provided function once for each entry in the map. Only includes entri
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
 cache.forEach((value, key) => {
-    console.log(key, value.name)
-})
+    console.log(key, value.name);
+});
 // "user-1" "Alice"
 // "user-2" "Bob"
 ```
@@ -197,15 +197,15 @@ Returns the value associated with the specified key, or `undefined` if the key d
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
+const user1: User = { id: "user-1", name: "Alice" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
 
-console.log(cache.get("user-1")) // { id: "user-1", name: "Alice" }
-console.log(cache.get("user-2")) // undefined
+console.log(cache.get("user-1")); // { id: "user-1", name: "Alice" }
+console.log(cache.get("user-2")); // undefined
 ```
 
 ### has
@@ -219,15 +219,15 @@ Returns `true` if an entry with the specified key exists and its value has not b
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
+const user1: User = { id: "user-1", name: "Alice" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
 
-console.log(cache.has("user-1")) // true
-console.log(cache.has("user-2")) // false
+console.log(cache.has("user-1")); // true
+console.log(cache.has("user-2")); // false
 ```
 
 ### keys
@@ -241,17 +241,17 @@ Returns an iterator of keys for each entry in the map. Only includes keys whose 
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
 for (const key of cache.keys()) {
-    console.log(key)
+    console.log(key);
 }
 // "user-1"
 // "user-2"
@@ -268,18 +268,18 @@ Adds or updates an entry in the map with the specified key and value. Returns th
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
+const cache = new WeakValueMap<string, User>();
 
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
 // Method chaining
-cache.set("user-1", user1).set("user-2", user2)
+cache.set("user-1", user1).set("user-2", user2);
 ```
 
 ### size
@@ -293,16 +293,16 @@ Returns the number of entries in the map. Note that this does not trigger cleanu
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
-console.log(cache.size) // 2
+console.log(cache.size); // 2
 ```
 
 ### Symbol.iterator
@@ -316,17 +316,17 @@ Returns an iterator of `[key, value]` pairs for each entry in the map. This make
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
 for (const [key, value] of cache) {
-    console.log(key, value)
+    console.log(key, value);
 }
 // "user-1" { id: "user-1", name: "Alice" }
 // "user-2" { id: "user-2", name: "Bob" }
@@ -343,17 +343,17 @@ Returns an iterator of values for each entry in the map. Only includes values th
 #### Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
-const user2: User = { id: "user-2", name: "Bob" }
+const user1: User = { id: "user-1", name: "Alice" };
+const user2: User = { id: "user-2", name: "Bob" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
-cache.set("user-2", user2)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
+cache.set("user-2", user2);
 
 for (const value of cache.values()) {
-    console.log(value)
+    console.log(value);
 }
 // { id: "user-1", name: "Alice" }
 // { id: "user-2", name: "Bob" }

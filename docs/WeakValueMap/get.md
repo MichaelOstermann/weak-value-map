@@ -9,13 +9,13 @@ Returns the value associated with the specified key, or `undefined` if the key d
 ## Example
 
 ```ts
-type User = { id: string; name: string }
+type User = { id: string; name: string };
 
-const user1: User = { id: "user-1", name: "Alice" }
+const user1: User = { id: "user-1", name: "Alice" };
 
-const cache = new WeakValueMap<string, User>()
-cache.set("user-1", user1)
+const cache = new WeakValueMap<string, User>();
+cache.set("user-1", user1);
 
-console.log(cache.get("user-1")) // { id: "user-1", name: "Alice" }
-console.log(cache.get("user-2")) // undefined
+console.log(cache.get("user-1")); // { id: "user-1", name: "Alice" }
+console.log(cache.get("user-2")); // undefined
 ```

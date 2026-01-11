@@ -17,7 +17,7 @@
     },
     "packages/weak-value-map": {
       "name": "@monstermann/weak-value-map",
-      "version": "0.0.0",
+      "version": "0.1.0",
     },
   },
   "packages": {
