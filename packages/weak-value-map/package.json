@@ -5,7 +5,7 @@
     "description": "A map with weakly-held values.",
     "author": "Michael Ostermann <michaelostermann@me.com>",
     "license": "MIT",
-    "homepage": "https://MichaelOstermann.github.io/weak-value-map",
+    "homepage": "https://github.com/MichaelOstermann/weak-value-map",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/MichaelOstermann/weak-value-map.git"
